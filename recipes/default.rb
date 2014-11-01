@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w{php-fpm php-pecl-zendopcache}.each do |pkg|
+%w{php-fpm php-pecl-zendopcache php-mbstring php-mysql php-xml}.each do |pkg|
   package pkg do
     action :install
     notifies :restart, "service[php-fpm]"
